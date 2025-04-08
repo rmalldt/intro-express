@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     message: 'Hello fruity. Search your favourite fruit information.',
   });
 });
-ß;
+
 app.use('/fruits', fruitRoutes);
 
 app.use((req, res) => {
