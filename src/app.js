@@ -4,15 +4,15 @@ const fruitRoutes = require('./routes/fruits-route');
 
 const app = express();
 
-app.use(cors()); // cors
-app.use(express.json()); // json body parser
+app.use(cors());
+app.use(express.json());
 
 app.get('/', (req, res) => {
   return res.send({
     message: 'Hello fruity. Search your favourite fruit information.',
   });
 });
-
+ß;
 app.use('/fruits', fruitRoutes);
 
 app.use((req, res) => {
