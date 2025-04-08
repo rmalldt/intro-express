@@ -4,7 +4,7 @@ const fruitRoutes = require('./routes/fruits-route');
 
 const app = express();
 
-app.use(cors); // cors
+app.use(cors()); // cors
 app.use(express.json()); // json body parser
 
 app.get('/', (req, res) => {
