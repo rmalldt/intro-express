@@ -1,23 +1,20 @@
 const express = require('express');
-
+const cors = require('cors');
 const fruitRoutes = require('./routes/fruits-route');
 
 const app = express();
 
-// JSON body parser
-app.use(express.json());
+app.use(cors); // cors
+app.use(express.json()); // json body parser
 
-// Home route
 app.get('/', (req, res) => {
   return res.send({
-    message: 'Hello fruity. Search your favourite fruit informations.',
+    message: 'Hello fruity. Search your favourite fruit information.',
   });
 });
 
-// Fruit route
 app.use('/fruits', fruitRoutes);
 
-// Catch all route
 app.use((req, res) => {
   res.statusCode = 404;
   res.send();
